@@ -13,6 +13,9 @@ const klapanBorderBottom = (param, color) => {
 const green = 'green';
 const red = 'red';
 
+
+
+
 if (otsekatel.src == 'http://techsite6/KASKAD/images/true.gif') {
   klapanBorderTop(otsekatelGazaTop, green);
   klapanBorderBottom(otsekatelGazaBot, green);
