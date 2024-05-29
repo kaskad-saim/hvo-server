@@ -65,7 +65,7 @@ const davlVozduhNizko = document.querySelector('.davl-vozduh-nizko-img img');
 const davlVozduhNizkoBg = document.querySelector('.davl-vozduh-nizko');
 
 if (davlVozduhNizko.src == 'http://techsite6/KASKAD/images/true.gif') {
-  davlVozduhNizkoBg.style.backgroundColor = '#db5454 ';
+  davlVozduhNizkoBg.style.backgroundColor = '#db5454';
 } else {
   davlVozduhNizkoBg.style.backgroundColor = '#635b5b';
 }
@@ -300,33 +300,56 @@ hoverNoneBtn.addEventListener('click', () => {
 // --------------------Модальное окно--------------------
 
 const btnModal = document.querySelector('.btn-modal');
-const windowInnerWidth = document.documentElement.clientWidth;
-const scrollbarWidth = parseInt(window.innerWidth) - parseInt(windowInnerWidth);
-const bodyElementHTML = document.querySelector('body');
 const modalBackground = document.querySelector('.modal-js');
 const modalClose = document.querySelector('.mnemo__modal-close');
 const modalActive = document.querySelector('.mnemo__modal-active');
 
-// const bodyMargin = () => {
-//   bodyElementHTML.style.marginRight = '-' + scrollbarWidth + 'px';
-// };
-
-// bodyMargin();
-
 btnModal.addEventListener('click', () => {
   modalBackground.classList.add('enabled');
   modalActive.classList.add('enabled');
-  // modalActive.style.left = 'calc(50% - ' + (175 - scrollbarWidth / 2) + 'px)';
 });
 
-modalClose.addEventListener('click', function () {
+modalClose.addEventListener('click', () => {
   modalBackground.classList.remove('enabled');
   modalActive.classList.remove('enabled');
 });
 
-modalBackground.addEventListener('click', function (event) {
+modalBackground.addEventListener('click', (event) => {
   if (event.target === modalBackground) {
     modalBackground.classList.remove('enabled');
     modalActive.classList.remove('enabled');
   }
 });
+
+const accordionBtn = document.querySelectorAll('.modal__accordion');
+const accordionTitle = document.querySelectorAll('.modal__accordion-title');
+const accordionContent = document.querySelectorAll('.modal__accordion-content');
+
+accordionTitle.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    let content = el.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      accordionContent.forEach((el) => (el.style.maxHeight = null));
+    } else {
+      accordionContent.forEach((el) => (el.style.maxHeight = null));
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  });
+});
+
+
+// hoverNoneBtn.addEventListener('click', () => {
+//   for (let i = 0; i < hoverElemParam.length; i++) {
+//     const item = hoverElemParam[i];
+//     item.classList.toggle('enabled-hover');
+//   }
+//   for (let i = 0; i < hoverAllParam.length; i++) {
+//     const item = hoverAllParam[i];
+//     item.classList.toggle('enabled-hover');
+//   }
+//   hoverElemParamLevel.classList.toggle('enabled-hover--level');
+//   hoverLevelParam.classList.toggle('enabled-hover--level');
+//   toggleBtnText();
+// });
