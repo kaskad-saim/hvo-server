@@ -322,7 +322,6 @@ for (let i = 0; i < accordionTitle.length; i++) {
     }
 
     if (!el.classList.contains('enabled')) {
-      console.log(el);
       for (let i = 0; i < accordionTitle.length; i++) {
         let item = accordionTitle[i];
         item.classList.remove('enabled');
@@ -333,7 +332,7 @@ for (let i = 0; i < accordionTitle.length; i++) {
     }
   });
 }
- 
+
 //включение/отключение всплывающих подсказок
 const hoverNoneBtn = document.querySelector('.hover-none-btn');
 const hoverElemParam = document.querySelectorAll('.mnemo__param-box--container');
@@ -363,3 +362,39 @@ hoverNoneBtn.addEventListener('click', () => {
   hoverLevelParam.classList.toggle('enabled-hover--level');
   toggleBtnText(hoverNoneBtn);
 });
+
+//пароль на скачивание
+const downloadPassword = document.querySelector('.download-password');
+const downloadPasswordForm = document.querySelector('.modal-content__form-kontroller');
+const downloadPasswordMay = document.querySelector('.modal-content__form-btn--may');
+const downloadDisplay = document.querySelector('.modal-content__link-container--display');
+const downloadPasswordFormlabel = document.querySelector('.modal-content__form-label');
+const downloadPasswordFormInput = document.querySelector('.modal-content__form-input');
+
+downloadPassword.addEventListener('click', (e) => {
+  e.preventDefault();
+  downloadPassword.classList.add('active');
+  downloadPasswordForm.classList.add('active');
+  downloadDisplay.style.display = 'none';
+});
+
+const formData = (e) => {
+  e.preventDefault();
+
+  const formPassword = downloadPasswordForm.querySelector('[name="kontroller-proga-password"]');
+
+  const value = {
+    formPassword: formPassword.value,
+  };
+
+  if (value.formPassword === '123456') {
+    downloadPasswordForm.classList.remove('active');
+    downloadPasswordMay.classList.add('active');
+    downloadDisplay.style.display = 'flex';
+  } else {
+    downloadPasswordFormlabel.classList.add('active');
+    downloadPasswordFormInput.classList.add('error');
+  }
+};
+
+downloadPasswordForm.addEventListener('submit', formData);

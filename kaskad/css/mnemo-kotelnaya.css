@@ -85,6 +85,9 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Bitter', sans-serif;
+}
 
 .list-reset {
   margin: 0;
@@ -1085,6 +1088,7 @@
 
 .modal__accordion {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .modal__accordion-title {
@@ -1147,7 +1151,6 @@
 }
 
 
-
 /* --------------------Положение исполнительных механизмов-------------------- */
 
 .mnemo__im {
@@ -1181,8 +1184,108 @@
   left: 65.7%;
 }
 
-/* Адаптив */
 
+
+/* для формы пароля */
+.modal-content__intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content__form {
+  display: none;
+  padding-right: 5px;
+}
+
+.modal-content__form.active {
+  display: flex;
+}
+
+.modal-content__form-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content__form-label {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: red;
+}
+
+.modal-content__form-label.active {
+  display: block;
+}
+
+.modal-content__form-input {
+  padding-left: 15px;
+  margin-right: 10px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid green;
+  background-color: white;
+  border-radius: 10px;
+  transition: border .3s ease-in-out;
+}
+
+.modal-content__form-input:hover {
+  border: 2px solid blue;
+}
+
+.modal-content__form-input:active {
+  border: 2px solid blue;
+}
+
+.modal-content__form-input:focus {
+  border: 2px solid blue;
+  outline: none;
+}
+
+.modal-content__form-input::placeholder {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: black;
+}
+
+.modal-content__form-input.error {
+  border: 2px solid red;
+}
+
+.modal-content__form-btn {
+  padding: 5px;
+  height: 30px;
+}
+
+
+.modal-content__form-btn--may {
+  display: none;
+}
+
+.modal-content__form-btn--may.active {
+  display: block;
+}
+
+.download-password.active {
+  display: none;
+}
+
+.modal-content__form-btn--ok {
+  border-radius: 10px;
+}
+
+/* Адаптив */
 @media (max-width: 1545px) {
 
   .modal__accordion-title {
