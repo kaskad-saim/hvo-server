@@ -1086,6 +1086,10 @@ body {
   flex-shrink: 0;
 }
 
+.modal-content__link-container.active {
+  display: none;
+}
+
 .modal__accordion {
   margin-bottom: 10px;
   position: relative;
@@ -1193,22 +1197,22 @@ body {
   justify-content: space-between;
 }
 
-.modal-content__form {
+.password-form {
   display: none;
   padding-right: 5px;
 }
 
-.modal-content__form.active {
+.password-form.active {
   display: flex;
 }
 
-.modal-content__form-item {
+.password-form-item {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.modal-content__form-label {
+.password-form-label {
   display: none;
   position: absolute;
   top: 34px;
@@ -1221,11 +1225,11 @@ body {
   color: red;
 }
 
-.modal-content__form-label.active {
+.password-form-label.active {
   display: block;
 }
 
-.modal-content__form-input {
+.password-form-input {
   padding-left: 15px;
   margin-right: 10px;
   height: 30px;
@@ -1239,50 +1243,67 @@ body {
   transition: border .3s ease-in-out;
 }
 
-.modal-content__form-input:hover {
+.password-form-input:hover {
   border: 2px solid blue;
 }
 
-.modal-content__form-input:active {
+.password-form-input:active {
   border: 2px solid blue;
 }
 
-.modal-content__form-input:focus {
+.password-form-input:focus {
   border: 2px solid blue;
   outline: none;
 }
 
-.modal-content__form-input::placeholder {
+.password-form-input::placeholder {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: black;
 }
 
-.modal-content__form-input.error {
+.password-form-input.error {
   border: 2px solid red;
 }
 
-.modal-content__form-btn {
+.password-form-btn {
   padding: 5px;
   height: 30px;
 }
 
 
-.modal-content__form-btn--may {
+.password-form-btn--mk500 {
   display: none;
 }
 
-.modal-content__form-btn--may.active {
+.password-form-btn--mk500.active {
   display: block;
 }
 
-.download-password.active {
+.password-form-btn--panel {
   display: none;
 }
 
-.modal-content__form-btn--ok {
+.password-form-btn--panel.active {
+  display: block;
+}
+
+.download-password-mk500.active {
+  display: none;
+}
+
+.password-form-btn--ok {
   border-radius: 10px;
+}
+
+.password-window {
+  display: block;
+  z-index: 1;
+}
+
+.password-window.active {
+  display: none;
 }
 
 /* Адаптив */
