@@ -1081,7 +1081,6 @@ body {
 }
 
 .modal-content__link-container {
-  padding-right: 5px;
   display: flex;
   flex-shrink: 0;
 }
@@ -1135,7 +1134,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 0;
+  max-height: 0px;
   font-size: 30px;
   line-height: 36px;
   list-style-type: none;
@@ -1144,7 +1143,7 @@ body {
 }
 
 .modal__accordion-content-item {
-  margin-bottom: 10px;
+  margin-bottom: 23px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1191,13 +1190,121 @@ body {
 
 
 /* для формы пароля */
-.modal-content__intro {
+/* .modal-content__intro {
   width: 100%;
   display: flex;
   justify-content: space-between;
+} */
+
+.password-window {
+  display: none;
+}
+
+.password-window.active {
+  display: block;
+  z-index: 1;
 }
 
 .password-form {
+  display: flex;
+  padding-right: 5px;
+  opacity: 0;
+}
+
+.password-form.active {
+  opacity: 1;
+}
+
+.password-form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-label {
+  margin-top: 27px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: red;
+  transition: opacity .3s ease-in-out;
+}
+
+.password-label.active {
+  display: block;
+}
+
+.password-input {
+  padding-left: 15px;
+  margin-right: 10px;
+  height: 26px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid green;
+  background-color: white;
+  border-radius: 10px;
+  transition: border .3s ease-in-out;
+}
+
+.password-input:hover {
+  border: 2px solid blue;
+}
+
+.password-input:active {
+  border: 2px solid blue;
+}
+
+.password-input:focus {
+  border: 2px solid blue;
+  outline: none;
+}
+
+.password-input::placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: black;
+}
+
+.password-input.error {
+  border: 2px solid red;
+  transition: border .3s ease-in-out;
+}
+
+.modal-content__link-may {
+  display: none;
+}
+
+.modal-content__link-may.active {
+  padding-right: 5px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.password-btn--ok {
+  padding: 6px;
+  height: 26px;
+  font-size: 15px;
+  line-height: 14px;
+  color: green;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid green;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out
+}
+
+.password-btn--ok:hover {
+  background-color: green;
+  color: white;
+}
+
+/* .password-form {
   display: none;
   padding-right: 5px;
 }
@@ -1265,6 +1372,7 @@ body {
 
 .password-form-input.error {
   border: 2px solid red;
+  transition: border .3s ease-in-out;
 }
 
 .password-form-btn {
@@ -1293,9 +1401,24 @@ body {
   display: none;
 }
 
-.password-form-btn--ok {
+.password-btn--ok {
+  padding: 5px;
+  height: 30px;
+  font-size: 15px;
+  line-height: 14x;
+  color: green;
+  font-weight: 500;
+  text-decoration: none;
   border-radius: 10px;
+  border: 2px solid green;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out
 }
+
+.password-btn--ok:hover {
+  background-color: green;
+  color: white;
+}
+
 
 .password-window {
   display: block;
@@ -1305,6 +1428,15 @@ body {
 .password-window.active {
   display: none;
 }
+
+.password-may-download {
+  display: none;
+}
+
+.password-may-download.active {
+  display: block;
+  z-index: 1;
+} */
 
 /* Адаптив */
 @media (max-width: 1545px) {

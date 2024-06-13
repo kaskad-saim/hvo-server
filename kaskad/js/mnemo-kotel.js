@@ -314,24 +314,24 @@ for (let i = 0; i < accordionTitle.length; i++) {
   el.addEventListener('click', (e) => {
     e.preventDefault();
     let contentNext = el.nextElementSibling;
-    let contentBack = el.previousElementSibling;
+    // let contentBack = el.previousElementSibling;
 
-    const formValue = (form, nameInput) => {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const password = form.querySelector(`[name="password-${nameInput}"]`);
-        const value = {
-          password: password.value,
-        };
-        if (value.password === '123456') {
-          dropDownDescrNull(accordionContent);
-          contentNext.style.maxHeight = contentNext.scrollHeight + 'px';
-          contentBack.classList.remove('active');
-        } else {
-          console.log('incorrect');
-        }
-      });
-    };
+    // const formValue = (form, nameInput) => {
+    //   form.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     const password = form.querySelector(`[name="password-${nameInput}"]`);
+    //     const value = {
+    //       password: password.value,
+    //     };
+    //     if (value.password === '123456') {
+    //       dropDownDescrNull(accordionContent);
+    //       contentNext.style.maxHeight = contentNext.scrollHeight + 'px';
+    //       contentBack.classList.remove('active');
+    //     } else {
+    //       console.log('incorrect');
+    //     }
+    //   });
+    // };
 
     if (contentNext.style.maxHeight) {
       dropDownDescrNull(accordionContent);
@@ -382,77 +382,54 @@ hoverNoneBtn.addEventListener('click', () => {
   toggleBtnText(hoverNoneBtn);
 });
 
-//пароль на скачивание
-// const downloadPassword = document.querySelector('.download-password');
-// const downloadPasswordForm = document.querySelector('.modal-content__form-kontroller');
-// const downloadPasswordMay = document.querySelector('.modal-content__form-btn--kontroller');
-// const downloadDisplay = document.querySelector('.modal-content__link-container--display');
-// const downloadPasswordFormlabel = document.querySelector('.modal-content__form-label');
-// const downloadPasswordFormInput = document.querySelector('.modal-content__form-input');
+// again new password ebu4ii
 
-// downloadPassword.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   downloadPassword.classList.add('active');
-//   downloadPasswordForm.classList.add('active');
-//   downloadDisplay.style.display = 'none';
-// });
+const downloadPassword1 = document.querySelector('.download-password-1');
+const windowPassword1 = document.querySelector('.password-window-1');
+const formPassword1 = document.querySelector('.password-form-1');
+const passwordMK500 = '123456';
+const downloadContent1 = document.querySelector('.download-content-1');
+const passwordLabel1 = document.querySelector('.password-label-1');
+const passwordInput1 = document.querySelector('.password-input-1');
 
-// const formData = (e) => {
-//   e.preventDefault();
+const downloadForm = (downloadPassword, passwordWindow, form) => {
+  downloadPassword.addEventListener('click', (e) => {
+    e.preventDefault();
+    downloadPassword.classList.add('active');
+    passwordWindow.classList.add('active');
+    form.classList.add('active');
+  });
+};
 
-//   const formPassword = downloadPasswordForm.querySelector('[name="kontroller-proga-password"]');
+const formValue = (content, form, passwordWindow, passwordValue, nameInput, labelbox, inputbox) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const password = form.querySelector(`[name="password-${nameInput}"]`);
+    const value = {
+      password: password.value,
+    };
 
-//   const value = {
-//     formPassword: formPassword.value,
-//   };
-//   if (value.formPassword === '123456') {
-//     downloadPasswordForm.classList.remove('active');
-//     downloadPasswordMay.classList.add('active');
-//     downloadDisplay.style.display = 'flex';
-//   } else {
-//     downloadPasswordFormlabel.classList.add('active');
-//     downloadPasswordFormInput.classList.add('error');
-//   }
+    if (value.password === passwordValue) {
+      passwordWindow.classList.remove('active');
+      content.classList.add('active');
+    } else {
+      labelbox.classList.add('active');
+      inputbox.classList.add('error');
+    }
+  });
+};
+downloadForm(downloadPassword1, windowPassword1, formPassword1);
 
-// };
+formValue(downloadContent1, formPassword1, windowPassword1, passwordMK500, 1, passwordLabel1, passwordInput1);
 
-// downloadPasswordForm.addEventListener('submit', formData);
+const downloadPassword2 = document.querySelector('.download-password-2');
+const windowPassword2 = document.querySelector('.password-window-2');
+const formPassword2 = document.querySelector('.password-form-2');
+const passwordDelta = '123';
+const downloadContent2 = document.querySelector('.download-content-2');
+const passwordLabel2 = document.querySelector('.password-label-2');
+const passwordInput2 = document.querySelector('.password-input-2');
 
+downloadForm(downloadPassword2, windowPassword2, formPassword2);
 
-
-// new function on password
-// const linkMK500 = document.querySelector('.password-form__link-mk500');
-// const passwordFormMK500 = document.querySelector('.password-form-mk500');
-// const passwordWindowMK500 = document.querySelector('.password-window-mk500');
-// const passwordMK500 = '123456';
-// const passwordInputMK500 = document.querySelector('.password-input-mk500');
-// const passwordLabelMK500 = document.querySelector('.password-label-mk500');
-
-// const downloadPasswordMK500 = document.querySelector('.download-password-mk500');
-
-// downloadPasswordMK500.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   downloadPasswordMK500.classList.add('active');
-//   passwordFormMK500.classList.add('active');
-//   linkMK500.classList.add('active')
-// });
-
-// const formValue = (content, form, passwordWindow, passwordValue, nameInput, labelBox, inputBox) => {
-//   form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const password = form.querySelector(`[name="password-${nameInput}"]`);
-//     const value = {
-//       password: password.value,
-//     };
-
-//     if (value.password === passwordValue) {
-//       passwordWindow.classList.add('active');
-//       content.classList.add('active');
-//     } else {
-//       labelBox.classList.add('active');
-//       inputBox.classList.add('error');
-//     }
-//   });
-// };
-
-// formValue(linkMK500, passwordFormMK500, passwordWindowMK500, passwordMK500, 1, passwordInputMK500, passwordLabelMK500);
+formValue(downloadContent2, formPassword2, windowPassword2, passwordDelta, 2, passwordLabel2, passwordInput2);
