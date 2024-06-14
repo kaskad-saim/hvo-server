@@ -109,6 +109,10 @@ body {
   border-image: initial;
 }
 
+.descr-reset {
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -140,6 +144,11 @@ body {
 }
 
 .mnemo__title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -154,7 +163,7 @@ body {
 .mnemo {
   margin-left: 10px;
   position: relative;
-  max-width: 1200px;
+  width: 1200px;
 }
 
 .mnemo__text {
@@ -260,7 +269,7 @@ body {
 }
 
 .kontrol-im-1 {
-  right: 44%;
+  right: 41.5%;
   bottom: 51%;
 }
 
@@ -348,8 +357,7 @@ body {
 }
 
 .kontrol-im-1-text {
-  width: 100px;
-  right: 41.5%;
+  right: 42%;
   bottom: 54%;
   font-size: 12px;
 }
@@ -498,4 +506,209 @@ body {
 .mnemo__gif-pump-2-2 {
   bottom: 17.5%;
   right: 20.4%;
+}
+
+.mnemo__symbols {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  z-index: 1;
+}
+
+.mnemo__symbols-title {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 600;
+  color: green;
+}
+
+.mnemo__symbols-item {
+  display: flex;
+  align-items: center;
+}
+
+.mnemo__symbols-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.mnemo__symbols-descr {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+}
+
+.mnemo__symbols-name {
+  margin-right: 40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mnemo__symbols-name-1 {
+  background-image: url('../images/hvo/mnemo-symbols/1.png');
+}
+
+.mnemo__symbols-name-2 {
+  background-image: url('../images/hvo/mnemo-symbols/2.png');
+}
+
+.mnemo__symbols-name-3 {
+  background-image: url('../images/hvo/mnemo-symbols/3.png');
+}
+
+.mnemo__symbols-name-4 {
+  background-image: url('../images/hvo/mnemo-symbols/4.png');
+}
+
+.mnemo__symbols-name-5 {
+  background-image: url('../images/hvo/mnemo-symbols/5.png');
+}
+
+
+@media (max-width: 1280px) {
+  .mnemo {
+    width: 976px;
+  }
+
+  .mnemo__img {
+    width: 976px;
+  }
+
+  .mnemo__param-naimenov,
+  .mnemo__param-text {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .mnemo__param-descr {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .mnemo__param {
+    padding: 0 3px;
+  }
+
+  .mnemo__gif-img {
+    width: 30px;
+    height: 27px;
+  }
+
+
+  .rashod-na-promyvku-text {
+    right: -7px;
+  }
+
+  .rashod-na-vhode-text {
+    top: 15.5%;
+    left: 3.5%;
+  }
+
+  .davl-posle-nasosov-1-1-2-3-text {
+    top: 3.5%;
+
+  }
+
+  .davl-pered-f3-1-7-text {
+    max-width: 65px;
+  }
+
+  .davl-posle-nasosov-3-1-2-text {
+    max-width: 60px;
+
+  }
+
+  .uroven-e1-1 {
+    width: 54px;
+    right: 30%;
+    bottom: 42%;
+  }
+
+  .uroven-e1-2 {
+    width: 57px;
+    right: 17%;
+    bottom: 42%;
+    padding: 2px;
+  }
+
+
+
+  .n1-1-percent {
+    width: 45px;
+    left: 14.3%;
+    top: 12%;
+  }
+
+  .n1-1-hz {
+    width: 45px;
+    left: 20%;
+    top: 12%;
+  }
+
+  .n1-2-percent {
+    width: 45px;
+    left: 14.3%;
+    top: 18%;
+  }
+
+  .n1-2-hz {
+    width: 45px;
+    left: 20%;
+    top: 18%;
+  }
+
+  .n2-1-percent {
+    width: 45px;
+    right: 21.5%;
+    bottom: 27.5%;
+  }
+
+  .n2-1-hz {
+    width: 45px;
+
+    right: 15.5%;
+    bottom: 27.5%;
+  }
+
+  .n2-2-percent {
+    width: 45px;
+
+    right: 21.5%;
+    bottom: 21.5%;
+  }
+
+  .n2-2-hz {
+    width: 45px;
+
+    right: 15.5%;
+    bottom: 21.5%;
+  }
+
+
+  .pomeshenie-2-text {
+    max-width: 200px;
+    font-size: 11px;
+    right: 7.5%;
+    bottom: 28.8%;
+  }
+
+  .kontrol-im-1-text {
+    right: 41.5%;
+  }
+
+  .mnemo__symbols-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .mnemo__symbols-descr {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
 }
