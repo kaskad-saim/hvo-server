@@ -160,6 +160,20 @@ body {
   color: green;
 }
 
+.mnemo__title-2 {
+  position: static;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  color: green;
+}
+
 .mnemo {
   margin-left: 10px;
   position: relative;
@@ -194,6 +208,35 @@ body {
   background-color: rgb(218, 215, 215);
   border-radius: 7px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.mnemo__uroven {
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+  min-width: 37px;
+}
+
+.mnemo__uroven-text {
+  font-size: 16px;
+  line-height: 14px;
+  color: rgb(47, 0, 255);
+  font-weight: 600;
+}
+
+.mnemo__uroven-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mnemo__uroven-naimenov {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: black;
 }
 
 .mnemo__param-text {
@@ -477,6 +520,415 @@ body {
   right: 0%;
 }
 
+/* position parametrs HVO2 */
+
+.rashod-vody-filtr {
+  padding: 2px 3px;
+  top: 4.5%;
+  left: 49.2%;
+  min-width: 67px;
+}
+
+.rashod-kanalizacia {
+  padding: 2px 3px;
+  bottom: 30.5%;
+  left: 47.8%;
+  min-width: 67px;
+}
+
+.davlenie-posle-filtrov {
+  top: 31%;
+  right: 44%;
+  min-width: 100px;
+}
+
+.im2 {
+  top: 4.5%;
+  right: 31.5%;
+  min-width: 55px;
+}
+
+.davlenie-carbon {
+  bottom: 2%;
+  left: 88%;
+}
+
+.davlenie-k265 {
+  bottom: 2%;
+  left: 54.5%;
+}
+
+.davlenie-k312 {
+  bottom: 2%;
+  left: 18%;
+}
+
+.temper-e2-1-ug {
+  top: 20.5%;
+  right: 41%;
+  min-width: 70px;
+}
+
+.temper-e2-1-sever {
+  top: 20.5%;
+  right: 25.1%;
+  min-width: 70px;
+}
+
+.temper-e2-2-ug {
+  top: 20.5%;
+  right: 18.9%;
+  min-width: 70px;
+}
+
+.temper-e2-2-sever {
+  top: 20.5%;
+  right: 3.2%;
+  min-width: 70px;
+}
+
+.uroven-titan-e2-1 {
+  top: 22%;
+  right: 36.3%;
+}
+
+.uroven-mida-e2-1 {
+  top: 22%;
+  right: 32%;
+}
+
+.uroven-titan-e2-2 {
+  top: 22%;
+  right: 14.8%;
+}
+
+.uroven-mida-e2-2 {
+  top: 22%;
+  right: 10.5%;
+}
+
+.rashod-vody-filtr-text {
+  top: 10%;
+  left: 47.9%;
+  max-width: 100px;
+}
+
+.rashod-kanalizacia-text {
+  bottom: 36%;
+  left: 43.4%;
+}
+
+.davlenie-posle-filtrov-text {
+  top: 27.5%;
+  right: 44%;
+  max-width: 100px;
+}
+
+.im2-text {
+  top: 9.8%;
+  right: 32.4%;
+}
+
+.carbon-text {
+  bottom: 2%;
+  right: 14.5%;
+}
+
+.k265-text {
+  bottom: 2%;
+  right: 48%;
+}
+
+.k312-text {
+  bottom: 2%;
+  left: 7%;
+}
+
+.temper-e2-1-sever-text {
+  top: 17%;
+  right: 24.3%;
+  max-width: 90px;
+}
+
+.temper-e2-1-ug-text {
+  top: 17%;
+  right: 41.1%;
+  max-width: 70px;
+}
+
+.temper-e2-2-sever-text {
+  top: 17%;
+  right: 2.4%;
+  max-width: 90px;
+}
+
+.temper-e2-2-ug-text {
+  top: 17%;
+  right: 19%;
+  max-width: 71px;
+}
+
+.uroven-titan-e2-1-text {
+  top: 27%;
+  right: 36.4%;
+  max-width: 50px;
+}
+
+.uroven-mida-e2-1-text {
+  top: 27%;
+  right: 31%;
+  max-width: 50px;
+}
+
+.uroven-titan-e2-2-text {
+  top: 27%;
+  right: 14.8%;
+  max-width: 50px;
+}
+
+.uroven-mida-e2-2-text {
+  top: 27%;
+  right: 9.5%;
+  max-width: 50px;
+}
+
+.davlenie-n4-1 {
+  left: 8.5%;
+  bottom: 18%;
+}
+
+.n4-1-hz {
+  left: 8.5%;
+  bottom: 21.5%;
+}
+
+.davlenie-n4-2 {
+  left: 21.3%;
+  bottom: 18%;
+}
+
+.n4-2-hz {
+  left: 21.3%;
+  bottom: 21.5%;
+}
+
+.davlenie-n5-1 {
+  left: 34.2%;
+  bottom: 18%;
+}
+
+.n5-1-hz {
+  left: 34.2%;
+  bottom: 21.5%;
+}
+
+.davlenie-n5-2 {
+  left: 47.1%;
+  bottom: 18%;
+}
+
+.n5-2-hz {
+  left: 47.1%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-1 {
+  left: 60%;
+  bottom: 18%;
+}
+
+.n6-1-hz {
+  left: 60%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-2 {
+  left: 72.7%;
+  bottom: 18%;
+}
+
+.n6-2-hz {
+  left: 72.7%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-3 {
+  left: 85.5%;
+  bottom: 18%;
+}
+
+.n6-3-hz {
+  left: 85.5%;
+  bottom: 21.5%;
+}
+
+.f3-1-text {
+  top: 21.5%;
+  left: 7.4%;
+}
+
+.f3-2-text {
+  top: 21.5%;
+  left: 19.7%;
+}
+
+.f3-3-text {
+  top: 21.5%;
+  left: 32%;
+}
+
+.f3-4-text {
+  top: 50.5%;
+  left: 6.6%;
+}
+
+.f3-5-text {
+  top: 50.5%;
+  left: 16.8%;
+}
+
+.f3-6-text {
+  top: 50.5%;
+  left: 26.9%;
+}
+
+.f3-7-text {
+  top: 50.5%;
+  left: 37.2%;
+}
+
+.f4-1-text {
+  top: 50.5%;
+  left: 47.4%;
+}
+
+.f4-2-text {
+  top: 50.5%;
+  left: 57.6%;
+}
+
+.f4-3-text {
+  top: 50.5%;
+  left: 67.8%;
+}
+
+.e2-1-text {
+  top: 16%;
+  right: 34.5%;
+}
+
+.e2-2-text {
+  top: 16%;
+  right: 13%;
+}
+
+.n4-1-text {
+  left: 2.3%;
+  bottom: 21.5%;
+}
+
+.n4-2-text {
+  left: 15.3%;
+  bottom: 21.5%;
+}
+
+.n5-1-text {
+  left: 28.3%;
+  bottom: 21.5%;
+}
+
+.n5-2-text {
+  left: 41%;
+  bottom: 21.5%;
+}
+
+.n6-1-text {
+  left: 53.9%;
+  bottom: 21.5%;
+}
+
+.n6-2-text {
+  left: 66.5%;
+  bottom: 21.5%;
+}
+
+.n6-3-text {
+  left: 79.4%;
+  bottom: 21.5%;
+}
+
+.pomeshenie-text {
+  left: 0;
+  top: 4%;
+}
+
+.kanalizacia-text {
+  left: 7%;
+  bottom: 29.7%;
+}
+
+/* Шкалы уровня */
+
+.column {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.column__box {
+  position: relative;
+}
+
+.column-e2-1 {
+  width: 92px;
+  height: 88px;
+  top: 15.8%;
+  right: 31.9%;
+  z-index: 0;
+}
+
+.column-e2-2 {
+  width: 91px;
+  height: 88px;
+  top: 15.8%;
+  right: 10.4%;
+  z-index: 0;
+}
+
+.column-e2-1__percent-titan {
+  width: 100%;
+  max-height: 88px;
+  background-color: #00bfff;
+}
+
+.column-e2-1__percent-mida {
+  width: 100%;
+  max-height: 88px;
+  background-color: #e88aff;
+}
+
+.column-e2-2__percent-titan {
+  width: 100%;
+  max-height: 88px;
+  background-color: #00bfff;
+}
+
+.column-e2-2__percent-mida {
+  width: 100%;
+  max-height: 88px;
+  background-color: #e88aff;
+}
+
+
+.column__span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
 /* gifs */
 .mnemo__gif {
   position: absolute;
@@ -507,6 +959,45 @@ body {
   bottom: 17.5%;
   right: 20.4%;
 }
+
+/* mnemo gif hvo2 */
+
+.mnemo__gif-pump-4-1 {
+  bottom: 18.5%;
+  left: 5.3%;
+}
+
+.mnemo__gif-pump-4-2 {
+  bottom: 18.5%;
+  left: 18.1%;
+}
+
+.mnemo__gif-pump-5-1 {
+  bottom: 18.5%;
+  left: 31%;
+}
+
+.mnemo__gif-pump-5-2 {
+  bottom: 18.5%;
+  left: 43.8%;
+}
+
+.mnemo__gif-pump-6-1 {
+  bottom: 18.5%;
+  right: 40.2%;
+}
+
+.mnemo__gif-pump-6-2 {
+  bottom: 18.5%;
+  right: 27.4%;
+}
+
+.mnemo__gif-pump-6-3 {
+  bottom: 18.5%;
+  right: 14.6%;
+}
+
+/* ----------------------------------------------------------------------- */
 
 .mnemo__symbols {
   position: absolute;
@@ -711,4 +1202,115 @@ body {
     line-height: 20px;
   }
 
+  /* hvo2 media */
+  .davlenie-posle-filtrov {
+    right: 43.6%;
+    min-width: 85px;
+  }
+
+  .davlenie-posle-filtrov-text {
+    top: 26.5%;
+    right: 44%;
+    max-width: 78px;
+  }
+
+  .im2 {
+    min-width: 45px;
+  }
+
+  .im2-text {
+    top: 9.6%;
+  }
+
+  .rashod-vody-filtr {
+    min-width: 54px;
+  }
+
+  .rashod-vody-filtr-text {
+    top: 9.5%;
+    left: 46.9%;
+    min-width: 85px;
+  }
+
+  .mnemo__uroven-text,
+  .mnemo__uroven-naimenov {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .temper-e2-1-sever,
+  .temper-e2-1-ug,
+  .temper-e2-2-sever,
+  .temper-e2-2-ug {
+    min-width: 51px;
+    top: 21%;
+  }
+
+  .temper-e2-2-ug {
+    right: 19.3%;
+  }
+
+  .temper-e2-1-sever {
+    right: 25.5%;
+  }
+
+  .temper-e2-1-sever-text,
+  .temper-e2-2-sever-text {
+    max-width: 66px;
+    top: 16.4%
+  }
+
+  .temper-e2-1-ug-text,
+  .temper-e2-2-ug-text {
+    max-width: 52px;
+    top: 16.4%
+  }
+
+  .temper-e2-1-sever-text {
+    right: 24.8%;
+  }
+
+  .temper-e2-2-ug-text {
+    right: 19.3%
+  }
+
+  .rashod-kanalizacia {
+    min-width: 55px;
+  }
+
+  .uroven-titan-e2-1 {
+    right: 36%;
+  }
+
+  .uroven-mida-e2-1 {
+    right: 31.5%;
+  }
+
+
+  .uroven-titan-e2-2 {
+    right: 14.4%;
+  }
+
+  .uroven-mida-e2-2 {
+    right: 10.2%;
+  }
+
+  .uroven-titan-e2-1-text,
+  .uroven-titan-e2-2-text,
+  .uroven-mida-e2-1-text,
+  .uroven-mida-e2-2-text {
+    max-width: 43px;
+  }
+
+  .column-e2-1 {
+    top: 15.5%;
+    width: 75px;
+    height: 75px;
+  }
+
+  .column-e2-2 {
+    top: 15.5%;
+    width: 75px;
+    height: 75px;
+  }
 }

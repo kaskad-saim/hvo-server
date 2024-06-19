@@ -18,7 +18,6 @@ const pump12Hz = document.querySelector('.n1-2-hz span');
 
 pumpingFunc(pump12, pump12Hz);
 
-
 const pump21 = document.querySelector('.mnemo__gif-pump-2-1 img');
 const pump21Hz = document.querySelector('.n2-1-hz span');
 
@@ -28,3 +27,6 @@ const pump22 = document.querySelector('.mnemo__gif-pump-2-2 img');
 const pump22Hz = document.querySelector('.n2-2-hz span');
 
 pumpingFunc(pump22, pump22Hz);
+
+
+
