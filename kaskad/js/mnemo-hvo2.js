@@ -101,3 +101,28 @@ const pump63 = document.querySelector('.mnemo__gif-pump-6-3 img');
 const pump63Hz = document.querySelector('.n6-3-hz span');
 
 pumpingFunc(pump63, pump63Hz);
+
+// Исполнительный механизм
+
+const klapanBorderLeft = (param, color) => {
+  param.style = `border-left: 12px solid ${color}`;
+};
+
+const klapanBorderRight = (param, color) => {
+  param.style = `border-right: 12px solid ${color}`;
+};
+
+const im2Left = document.querySelector('.mnemo__im2-left');
+const im2Right = document.querySelector('.mnemo__im2-right');
+const im2Value = document.querySelector('.im2-value');
+
+const green = 'green';
+const red = 'red';
+
+if (im2Value.innerHTML >= 5) {
+  klapanBorderLeft(im2Left, green);
+  klapanBorderRight(im2Right, green);
+} else {
+  klapanBorderLeft(im2Left, red);
+  klapanBorderRight(im2Right, red);
+}

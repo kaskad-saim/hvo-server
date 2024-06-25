@@ -28,5 +28,59 @@ const pump22Hz = document.querySelector('.n2-2-hz span');
 
 pumpingFunc(pump22, pump22Hz);
 
+// Исполнительный механизм
+const klapanBorderLeft = (param, color) => {
+  param.style = `border-left: 10px solid ${color}`;
+};
 
+const klapanBorderRight = (param, color) => {
+  param.style = `border-right: 10px solid ${color}`;
+};
 
+const im1Left = document.querySelector('.mnemo__im1-left');
+const im1Right = document.querySelector('.mnemo__im1-right');
+const im1Value = document.querySelector('.im1-value');
+
+const green = 'green';
+const red = 'red';
+
+if (im1Value.innerHTML >= 5) {
+  klapanBorderLeft(im1Left, green);
+  klapanBorderRight(im1Right, green);
+} else {
+  klapanBorderLeft(im1Left, red);
+  klapanBorderRight(im1Right, red);
+}
+
+// Автоматическая шкала уровня в ёмкостях
+
+const level = (level, current, levelPercent, fullPersent, fullPx) => {
+  let valuePercent = (current * 100) / fullPersent;
+  levelPercent.innerHTML = Math.floor(valuePercent);
+  let valuePx = (valuePercent * fullPx) / 100;
+  level.style.height = valuePx + 'px';
+};
+
+const levelE11 = document.querySelector('.column-e1-1__percent');
+const valueE11Current = document.querySelector('.e1-1-value').innerHTML;
+const levelE11Percent = document.querySelector('.span-e1-1');
+
+const levelE12 = document.querySelector('.column-e1-2__percent');
+const valueE12Current = document.querySelector('.e1-2-value').innerHTML;
+const levelE12Percent = document.querySelector('.span-e1-2');
+
+let screenWidth = window.innerWidth;
+
+if ((levelE11, valueE11Current, levelE11Percent)) {
+  level(levelE11, valueE11Current, levelE11Percent, 1600, 88);
+}
+if (screenWidth < 1280) {
+  level(levelE11, valueE11Current, levelE11Percent, 1600, 70);
+}
+
+if ((levelE12, valueE12Current, levelE12Percent)) {
+  level(levelE12, valueE12Current, levelE12Percent, 1600, 88);
+}
+if (screenWidth < 1280) {
+  level(levelE12, valueE12Current, levelE12Percent, 1600, 70);
+}

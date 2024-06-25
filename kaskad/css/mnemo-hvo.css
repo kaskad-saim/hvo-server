@@ -225,6 +225,13 @@ body {
   font-weight: 600;
 }
 
+.mnemo__uroven-text-mida {
+  font-size: 16px;
+  line-height: 14px;
+  color: #360261;
+  font-weight: 600;
+}
+
 .mnemo__uroven-box {
   display: flex;
   flex-direction: column;
@@ -281,16 +288,16 @@ body {
 }
 
 .uroven-e1-1 {
-  width: 57px;
-  right: 30.55%;
-  bottom: 41%;
+  width: 66px;
+  right: 30.1%;
+  bottom: 37%;
   padding: 2px;
 }
 
 .uroven-e1-2 {
-  width: 57px;
-  right: 17.6%;
-  bottom: 41%;
+  width: 66px;
+  right: 17.3%;
+  bottom: 37%;
   padding: 2px;
 }
 
@@ -625,8 +632,8 @@ body {
 }
 
 .im2-text {
-  top: 9.8%;
-  right: 32.4%;
+  top: 10%;
+  right: 32.6%;
 }
 
 .carbon-text {
@@ -672,24 +679,28 @@ body {
   top: 27%;
   right: 36.4%;
   max-width: 50px;
+  color: rgb(47, 0, 255);
 }
 
 .uroven-mida-e2-1-text {
   top: 27%;
   right: 31%;
   max-width: 50px;
+  color: #360261;
 }
 
 .uroven-titan-e2-2-text {
   top: 27%;
   right: 14.8%;
   max-width: 50px;
+  color: rgb(47, 0, 255);
 }
 
 .uroven-mida-e2-2-text {
   top: 27%;
   right: 9.5%;
   max-width: 50px;
+  color: #360261;
 }
 
 .davlenie-n4-1 {
@@ -867,6 +878,70 @@ body {
   bottom: 29.7%;
 }
 
+/* Исполнительный механизм */
+
+.mnemo__kran-gor {
+  position: absolute;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.mnemo__kran-vert {
+  position: absolute;
+  z-index: 1;
+}
+
+.mnemo__kran-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.mnemo__triangle-1 {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-left: 12px solid green;
+  border-bottom: 9px solid transparent;
+}
+
+.mnemo__triangle-2 {
+  margin-left: -3px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 12px solid green;
+  border-bottom: 9px solid transparent;
+}
+
+.mnemo__triangle-1-gor {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 10px solid green;
+  border-bottom: 7px solid transparent;
+}
+
+.mnemo__triangle-2-gor {
+  margin-left: -3px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 10px solid green;
+  border-bottom: 7px solid transparent;
+}
+
+.im1-kran {
+  bottom: 44.7%;
+  right: 44.37%;
+}
+
+.im2-kran {
+  top: 7.8%;
+  right: 33%;
+}
+
 /* Шкалы уровня */
 
 .column {
@@ -878,6 +953,22 @@ body {
 
 .column__box {
   position: relative;
+}
+
+.column-e1-1 {
+  width: 60px;
+  height: 88px;
+  top: 50.15%;
+  right: 30.4%;
+  z-index: 0;
+}
+
+.column-e1-2 {
+  width: 60px;
+  height: 88px;
+  top: 50.15%;
+  right: 17.6%;
+  z-index: 0;
 }
 
 .column-e2-1 {
@@ -896,6 +987,18 @@ body {
   z-index: 0;
 }
 
+.column-e1-1__percent {
+  width: 100%;
+  max-height: 88px;
+  background-color: #00bfff;
+}
+
+.column-e1-2__percent {
+  width: 100%;
+  max-height: 88px;
+  background-color: #00bfff;
+}
+
 .column-e2-1__percent-titan {
   width: 100%;
   max-height: 88px;
@@ -905,7 +1008,7 @@ body {
 .column-e2-1__percent-mida {
   width: 100%;
   max-height: 88px;
-  background-color: #e88aff;
+  background-color: #b26fe9;
 }
 
 .column-e2-2__percent-titan {
@@ -917,7 +1020,7 @@ body {
 .column-e2-2__percent-mida {
   width: 100%;
   max-height: 88px;
-  background-color: #e88aff;
+  background-color: #b26fe9;
 }
 
 
@@ -1115,16 +1218,15 @@ body {
   }
 
   .uroven-e1-1 {
-    width: 54px;
+    width: 59px;
     right: 30%;
-    bottom: 42%;
+    bottom: 37%;
   }
 
   .uroven-e1-2 {
-    width: 57px;
+    width: 59px;
     right: 17%;
-    bottom: 42%;
-    padding: 2px;
+    bottom: 37%;
   }
 
 
@@ -1202,6 +1304,16 @@ body {
     line-height: 20px;
   }
 
+  .column-e1-1 {
+    width: 48px;
+    height: 71px;
+  }
+
+  .column-e1-2 {
+    width: 48px;
+    height: 71px;
+  }
+
   /* hvo2 media */
   .davlenie-posle-filtrov {
     right: 43.6%;
@@ -1216,10 +1328,6 @@ body {
 
   .im2 {
     min-width: 45px;
-  }
-
-  .im2-text {
-    top: 9.6%;
   }
 
   .rashod-vody-filtr {
@@ -1313,4 +1421,19 @@ body {
     width: 75px;
     height: 75px;
   }
+
+  .im2-text {
+    top: 9.6%;
+  }
+
+  .im1-kran {
+    bottom: 44.5%;
+    right: 44.2%;
+  }
+
+  .im2-kran {
+    top: 7.6%;
+    right: 32.9%;
+  }
+
 }
