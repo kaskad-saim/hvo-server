@@ -1,10 +1,8 @@
 const pumpingFunc = (pump, pumpHz) => {
   if (pumpHz.innerHTML >= 5) {
-    pump.src = 'http://Techsite6/kaskad/images/fan-run.gif';
-    console.log('true');
+    pump.style.animationPlayState = 'running';
   } else {
-    pump.src = 'http://Techsite6/kaskad/images/fan-stop.png';
-    console.log('false');
+    pump.style.animationPlayState = 'paused';
   }
 };
 

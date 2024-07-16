@@ -61,9 +61,9 @@ if (screenWidth < 1280) {
 
 const pumpingFunc = (pump, pumpHz) => {
   if (pumpHz.innerHTML >= 5) {
-    pump.src = 'http://Techsite6/kaskad/images/fan-run.gif';
+    pump.style.animationPlayState = 'running';
   } else {
-    pump.src = 'http://Techsite6/kaskad/images/fan-stop.png';
+    pump.style.animationPlayState = 'paused';
   }
 };
 
