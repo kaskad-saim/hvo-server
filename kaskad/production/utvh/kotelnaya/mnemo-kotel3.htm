@@ -16,6 +16,12 @@
       Котел №3
     </h2>
 
+    <!-- <div class="audio-test">
+    <audio class="siren-test" controls loop>
+      <source src="http://Techsite6/kaskad/audio/siren.mp3" type="audio/mp3">
+    </audio>
+  </div> -->
+
     <div class="mnemo__modal-background modal-js">
       <div class="mnemo__modal-active">
         <div class="mnemo__modal-title">
@@ -320,19 +326,25 @@
         <#PasspValue PasspType=2 PasspID=71 Type="Pictures" [true]="images\fire-gif.gif" [false]="images\none.gif">
       </div>
       <div class="mnemo__gif mnemo__gif-2 smoke-fan">
-        <#PasspValue PasspType=2 PasspID=72 Type="Pictures" [true]="images\fan-run.gif" [false]="images\fan-stop.png">
+        <#PasspValue PasspType=2 PasspID=72 Type="Pictures" [true]="images\ventilator.png"
+          [false]="images\ventilator-none.png">
       </div>
       <div class="mnemo__gif mnemo__gif-3 vent">
-        <#PasspValue PasspType=2 PasspID=73 Type="Pictures" [true]="images\fan-run.gif" [false]="images\fan-stop.png">
+        <#PasspValue PasspType=2 PasspID=73 Type="Pictures" [true]="images\ventilator.png"
+          [false]="images\ventilator-none.png">
       </div>
       <div class="mnemo__gif mnemo__gif-4 water-pump">
-        <#PasspValue PasspType=2 PasspID=69 Type="Pictures" [true]="images\fan-run.gif" [false]="images\fan-stop.png">
+        <#PasspValue PasspType=2 PasspID=69 Type="Pictures" [true]="images\ventilator.png"
+          [false]="images\ventilator-none.png">
       </div>
-      <div class="mnemo__gif mnemo__gif-9 iskra-zapalnik">
+      <div class="mnemo__gif mnemo__gif-5 iskra-zapalnik">
         <#PasspValue PasspType=2 PasspID=61 Type="Pictures" [true]="images\iskra.gif" [false]="images\none.gif">
       </div>
-      <div class="mnemo__gif mnemo__gif-10 fire-zapalnik">
+      <div class="mnemo__gif mnemo__gif-6 fire-zapalnik">
         <#PasspValue PasspType=2 PasspID=70 Type="Pictures" [true]="images\fire-zapalnik.gif" [false]="images\none.gif">
+      </div>
+      <div class="mnemo__gif mnemo__gif-7 smoke-par">
+        <#PasspValue PasspType=2 PasspID=72 Type="Pictures" [true]="images\par.gif" [false]="images\none.gif">
       </div>
 
       <!-- Задвижки -->
@@ -612,7 +624,7 @@
       <div class="mnemo__uroven-box uroven-div">
         <div class="mnemo__uroven-flex">
           <div class="mnemo__uroven-descr mnemo__uroven-descr-left"> <span
-              class="mnemo__uroven-text uroven-v-barabane-kotla-value">
+              class="mnemo__uroven-text uroven-v-barabane-kotla-value uroven-siren">
               <#PasspValue PasspType=1 PasspID=79 Precision=0>
             </span></div>
           <div class="mnemo__uroven mnemo__uroven-right"> Уровень в барабане котла (мм)

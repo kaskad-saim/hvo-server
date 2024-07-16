@@ -58,6 +58,22 @@ try {
     klapanBorderBottom(zapalnikBot, red);
   }
 
+  const ventilatorGif2 = document.querySelector('.mnemo__gif-2 img');
+  const ventilatorGif3 = document.querySelector('.mnemo__gif-3 img');
+  const ventilatorGif4 = document.querySelector('.mnemo__gif-4 img');
+
+  const VentAnimation = (param) => {
+    if (param.src == 'http://techsite6/KASKAD/images/ventilator.png') {
+      param.style.animationPlayState = 'running';
+    } else {
+      param.style.animationPlayState = 'pause';
+    }
+  };
+
+  VentAnimation(ventilatorGif2);
+  VentAnimation(ventilatorGif3);
+  VentAnimation(ventilatorGif4);
+
   // ---------------------Аварийная сигнализация--------------------
 
   // Давление воздуха низко
@@ -433,3 +449,11 @@ const passwordInput2 = document.querySelector('.password-input-2');
 downloadForm(downloadPassword2, windowPassword2, formPassword2);
 
 formValue(downloadContent2, formPassword2, windowPassword2, passwordDelta, 2, passwordLabel2, passwordInput2);
+
+// audio test
+// const siren = document.querySelector('.siren-test');
+// const valueUroven = document.querySelector('.uroven-siren');
+
+// if (valueUroven.innerHTML >= 2) {
+//   siren.play();
+// }

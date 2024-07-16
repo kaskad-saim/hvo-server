@@ -198,32 +198,38 @@ body {
 
 .mnemo__gif-2 {
   top: 73%;
-  left: 69%;
+  left: 69.3%;
 }
 
 .mnemo__gif-2 img {
-  width: 50px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
+  animation: rotate 1s infinite linear;
+  animation-play-state: paused;
 }
 
 .mnemo__gif-3 {
   top: 73%;
-  left: 14.2%;
+  left: 14.4%;
 }
 
 .mnemo__gif-3 img {
-  width: 50px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
+  animation: rotate 1s infinite linear;
+  animation-play-state: paused;
 }
 
 .mnemo__gif-4 {
-  top: 37.2%;
-  left: 65.5%;
+  top: 37%;
+  left: 65.8%;
 }
 
 .mnemo__gif-4 img {
-  width: 50px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
+  animation: rotate 1s infinite linear;
+  animation-play-state: paused;
 }
 
 .mnemo__gif-5 {
@@ -241,6 +247,26 @@ body {
 .mnemo__gif-6 {
   top: 54.8%;
   left: 22.6%;
+}
+
+.mnemo__gif-7 {
+  right: 27%;
+  top: 13.3%;
+}
+
+.mnemo__gif-7 img {
+  width: 40px;
+  height: 80px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .smoke-text {
@@ -650,7 +676,7 @@ body {
   z-index: 2;
   /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 5px, rgba(0, 0, 0, 0.12) 0px 0px 3px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s ease-in-out;
@@ -701,17 +727,6 @@ body {
   align-items: center;
 }
 
-.mnemo__param-box--btn {
-  padding: 5px;
-  font-family: 'Bitter', sans-serif;
-  font-size: 16px;
-  line-height: 23px;
-  font-weight: 600;
-  color: green;
-  border: 1px solid green;
-  transition: color .3s ease-in-out, background-color .3s ease-in-out;
-}
-
 .mnemo__modal-box--btn {
   padding: 5px;
   font-family: 'Bitter', sans-serif;
@@ -724,9 +739,15 @@ body {
   transition: color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
-.mnemo__param-box--btn:hover {
-  color: white;
-  background-color: green;
+.mnemo__param-box--btn {
+  padding: 5px;
+  font-family: 'Bitter', sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 600;
+  color: green;
+  border: 1px solid green;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .mnemo__modal-box--btn:hover {
@@ -735,16 +756,25 @@ body {
   cursor: pointer;
 }
 
-.mnemo__param-box--btn:active {
-  color: white;
-  background-color: green;
-}
-
 .mnemo__modal-box--btn:active {
   color: white;
   background-color: green;
   cursor: pointer;
 }
+
+
+
+.mnemo__param-box--btn:hover {
+  color: white;
+  background-color: green;
+}
+
+.mnemo__param-box--btn:active {
+  color: white;
+  background-color: green;
+}
+
+
 
 .mnemo__param-box--container:hover .mnemo__param-clue {
   visibility: hidden;
@@ -943,7 +973,6 @@ body {
   z-index: 1;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  border: 3px solid black;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 6px, rgba(0, 0, 0, 0.7) 0px 3px 6px;
 
@@ -1286,7 +1315,7 @@ body {
 }
 
 .password-btn--ok {
-  padding: 6px;
+  padding: 3px 10px;
   height: 26px;
   font-size: 15px;
   line-height: 14px;
@@ -1302,6 +1331,12 @@ body {
   background-color: green;
   color: white;
 }
+
+/* audio */
+
+/* .audio-test {
+  display: block;
+} */
 
 /* .password-form {
   display: none;
@@ -1604,23 +1639,35 @@ body {
   }
 
   .mnemo__gif-2 {
-    left: 90.9%;
+    left: 91.2%;
+  }
+
+  .mnemo__gif-2 img {
+    width: 43px;
+    height: 43px;
   }
 
   .mnemo__gif-3 {
-    left: 18.5%;
+    left: 19.1%;
+  }
+
+  .mnemo__gif-3 img {
+    width: 43px;
+    height: 43px;
   }
 
   .mnemo__gif-4 {
-    left: 86.2%;
+    left: 86.7%;
   }
 
-  .mnemo__gif-9 {
-    left: 31.2%;
+  .mnemo__gif-4 img {
+    width: 43px;
+    height: 43px;
   }
 
-  .mnemo__gif-10 {
-    left: 29%;
+  .mnemo__gif-7 {
+    right: 3.9%;
+    top: 13.1%;
   }
 
   .mnemo__kran-1 {
