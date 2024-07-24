@@ -52,11 +52,17 @@ if (im1Value.innerHTML >= 5) {
 
 // Автоматическая шкала уровня в ёмкостях
 
-const level = (level, current, levelPercent, fullPersent, fullPx) => {
-  let valuePercent = (current * 100) / fullPersent;
-  levelPercent.innerHTML = Math.floor(valuePercent);
-  let valuePx = (valuePercent * fullPx) / 100;
-  level.style.height = valuePx + 'px';
+const levelObj = (minScale, maxScale, current, maxSize, level, levelPercent, minSet, maxSet) => {
+  let totalScale = maxScale - minScale;
+  let valueFromMin = current - minScale;
+  let percentage = (valueFromMin / totalScale) * 100;
+  let px = (maxSize * percentage) / 100;
+  levelPercent.innerHTML = parseFloat(percentage.toFixed(0));
+  level.style.height = px + 'px';
+
+  if (levelPercent.innerHTML <= minSet || levelPercent.innerHTML >= maxSet) {
+    level.style.backgroundColor = 'red';
+  }
 };
 
 const levelE11 = document.querySelector('.column-e1-1__percent');
@@ -70,15 +76,15 @@ const levelE12Percent = document.querySelector('.span-e1-2');
 let screenWidth = window.innerWidth;
 
 if ((levelE11, valueE11Current, levelE11Percent)) {
-  level(levelE11, valueE11Current, levelE11Percent, 1600, 88);
-}
-if (screenWidth < 1280) {
-  level(levelE11, valueE11Current, levelE11Percent, 1600, 70);
+  levelObj(0, 1600, valueE11Current, 88, levelE11, levelE11Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueE11Current, 70, levelE11, levelE11Percent, 0, 100);
+  }
 }
 
 if ((levelE12, valueE12Current, levelE12Percent)) {
-  level(levelE12, valueE12Current, levelE12Percent, 1600, 88);
-}
-if (screenWidth < 1280) {
-  level(levelE12, valueE12Current, levelE12Percent, 1600, 70);
+  levelObj(0, 1600, valueE12Current, 88, levelE12, levelE12Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueE12Current, 70, levelE12, levelE12Percent, 0, 100);
+  }
 }

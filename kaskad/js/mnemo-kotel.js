@@ -255,19 +255,15 @@ try {
   }
 
   // --------------------Автоматическая шкала уровня в котле--------------------
+  const levelObj = (minScale, maxScale, current, maxSize, level, levelPercent, minSet, maxSet) => {
+    let totalScale = maxScale - minScale;
+    let valueFromMin = current - minScale;
+    let percentage = (valueFromMin / totalScale) * 100;
+    let px = (maxSize * percentage) / 100;
+    levelPercent.innerHTML = parseFloat(percentage.toFixed(0));
+    level.style.height = px + 'px';
 
-  const level = (level, current, levelPercent, fullPx) => {
-    const minValue = -100;
-    const maxValue = 100;
-    let valuePercent = ((current - minValue) / (maxValue - minValue)) * 100;
-    let valuePx = (valuePercent * fullPx) / 100;
-    levelPercent.innerHTML = Math.floor(valuePx);
-    level.style.height = valuePx + 'px';
-
-    if (valuePx >= 72.25) {
-      level.style.backgroundColor = 'red';
-    }
-    if (valuePx <= 12.45) {
+    if (levelPercent.innerHTML <= minSet || levelPercent.innerHTML >= maxSet) {
       level.style.backgroundColor = 'red';
     }
   };
@@ -279,11 +275,10 @@ try {
   let screenWidth = window.innerWidth;
 
   if ((levelKotel, valueKotelCurrent, levelKotelPercent)) {
-    level(levelKotel, valueKotelCurrent, levelKotelPercent, 85);
-  }
-
-  if (screenWidth < 1280) {
-    level(levelKotel, valueKotelCurrent, levelKotelPercent, 80);
+    levelObj(-315, 315, valueKotelCurrent, 85, levelKotel, levelKotelPercent, 12.45, 72.25);
+    if (screenWidth < 1280) {
+      levelObj(-315, 315, valueKotelCurrent, 80, levelKotel, levelKotelPercent, 12.45, 72.25);
+    }
   }
 } catch (err) {
   console.log('Нет показаний');

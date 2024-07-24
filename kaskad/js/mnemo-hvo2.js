@@ -1,10 +1,16 @@
 // Автоматическая шкала уровня в ёмкостях
 
-const level = (level, current, levelPercent, fullPersent, fullPx) => {
-  let valuePercent = (current * 100) / fullPersent;
-  levelPercent.innerHTML = Math.floor(valuePercent);
-  let valuePx = (valuePercent * fullPx) / 100;
-  level.style.height = valuePx + 'px';
+const levelObj = (minScale, maxScale, current, maxSize, level, levelPercent, minSet, maxSet) => {
+  let totalScale = maxScale - minScale;
+  let valueFromMin = current - minScale;
+  let percentage = (valueFromMin / totalScale) * 100;
+  let px = (maxSize * percentage) / 100;
+  levelPercent.innerHTML = parseFloat(percentage.toFixed(0));
+  level.style.height = px + 'px';
+
+  if (levelPercent.innerHTML <= minSet || levelPercent.innerHTML >= maxSet) {
+    level.style.backgroundColor = 'red';
+  }
 };
 
 const levelTitanE21 = document.querySelector('.column-e2-1__percent-titan');
@@ -26,35 +32,31 @@ const levelMidaE22Percent = document.querySelector('.mida-span-e2-2');
 let screenWidth = window.innerWidth;
 
 if ((levelTitanE21, valueTitanE21Current, levelTitanE21Percent)) {
-  level(levelTitanE21, valueTitanE21Current, levelTitanE21Percent, 1600, 88);
-}
-
-if (screenWidth < 1280) {
-  level(levelTitanE21, valueTitanE21Current, levelTitanE21Percent, 1600, 75);
+  levelObj(0, 1600, valueTitanE21Current, 88, levelTitanE21, levelTitanE21Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueTitanE21Current, 75, levelTitanE21, levelTitanE21Percent, 0, 100);
+  }
 }
 
 if ((levelMidaE21, valueMidaE21Current, levelMidaE21Percent)) {
-  level(levelMidaE21, valueMidaE21Current, levelMidaE21Percent, 1600, 88);
-}
-
-if (screenWidth < 1280) {
-  level(levelMidaE21, valueMidaE21Current, levelMidaE21Percent, 1600, 75);
+  levelObj(0, 1600, valueMidaE21Current, 88, levelMidaE21, levelMidaE21Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueMidaE21Current, 75, levelMidaE21, levelMidaE21Percent, 0, 100);
+  }
 }
 
 if ((levelTitanE22, valueTitanE22Current, levelTitanE22Percent)) {
-  level(levelTitanE22, valueTitanE22Current, levelTitanE22Percent, 1600, 88);
-}
-
-if (screenWidth < 1280) {
-  level(levelTitanE22, valueTitanE22Current, levelTitanE22Percent, 1600, 75);
+  levelObj(0, 1600, valueTitanE22Current, 88, levelTitanE22, levelTitanE22Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueTitanE22Current, 75, levelTitanE22, levelTitanE22Percent, 0, 100);
+  }
 }
 
 if ((levelMidaE22, valueMidaE22Current, levelMidaE22Percent)) {
-  level(levelMidaE22, valueMidaE22Current, levelMidaE22Percent, 1600, 88);
-}
-
-if (screenWidth < 1280) {
-  level(levelMidaE22, valueMidaE22Current, levelMidaE22Percent, 1600, 75);
+  levelObj(0, 1600, valueMidaE22Current, 88, levelMidaE22, levelMidaE22Percent, 0, 100);
+  if (screenWidth < 1280) {
+    levelObj(0, 1600, valueMidaE22Current, 75, levelMidaE22, levelMidaE22Percent, 0, 100);
+  }
 }
 
 // Вкл/откл анимации насосов
