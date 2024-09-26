@@ -175,6 +175,7 @@ body {
 }
 
 .mnemo {
+  top: 50px;
   margin-left: 10px;
   position: relative;
   width: 1200px;
@@ -204,7 +205,6 @@ body {
 .mnemo__param {
   padding: 3px 7px;
   position: absolute;
-  z-index: 1;
   background-color: rgb(218, 215, 215);
   border-radius: 7px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
@@ -278,7 +278,7 @@ body {
 }
 
 .rashod-vody-na-ustanovky {
-  left: 4%;
+  left: 5%;
   top: 18%;
 }
 
@@ -525,6 +525,180 @@ body {
   max-width: 72px;
   bottom: 14%;
   right: 0%;
+}
+
+/* --------------------Всплывающие подсказки-------------------- */
+
+.mnemo__param-box--btns {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mnemo__param-box--btn {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 600;
+  color: green;
+  border: 1px solid green;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.mnemo__param-box--btn:hover {
+  color: white;
+  background-color: green;
+}
+
+.mnemo__param-box--btn:active {
+  color: white;
+  background-color: green;
+}
+
+.mnemo__param-clue {
+  width: 225px;
+  position: absolute !important;
+  z-index: 11;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.mnemo__param-clue-content {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 238, 238);
+  border: 2px solid green;
+  border-radius: 15px;
+}
+
+.mnemo__param-clue-content::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  z-index: -1;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  transform: rotate(45deg) translateX(-50%);
+}
+
+.mnemo__param-clue-div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.mnemo__param-clue-div {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.mnemo__param-clue-span {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.mnemo__tooltip:hover .mnemo__param-clue {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mnemo__tooltip:active .mnemo__param-clue {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mnemo__tooltip:focus {
+  outline: none;
+}
+
+.mnemo__tooltip:focus .mnemo__param-clue {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.enabled-hover:hover {
+  background-color: lightgreen;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.enabled-hover:active {
+  background-color: lightgreen;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.enabled-hover:hover .mnemo__param-clue {
+  visibility: visible;
+  opacity: 1;
+}
+
+.enabled-hover:focus {
+  outline: none;
+}
+
+.enabled-hover:focus .mnemo__param-clue {
+  visibility: 1;
+  opacity: 1;
+}
+
+/* tooltips HVO1 */
+
+.davl-vhod-ustanivki-clue {
+  width: 195px;
+  left: -60px;
+  top: -96px;
+}
+
+.rashod-vody-na-ustanovky-clue {
+  width: 200px;
+  left: -71px;
+  top: -210px;
+}
+
+.rashod-vody-na-promyvky-clue {
+  width: 200px;
+  left: -71px;
+  top: -210px;
+}
+
+.davl-posle-nasosov-1-1-2-3-clue {
+  width: 195px;
+  left: -60px;
+  top: -96px;
+}
+
+.uroven-e1-1-clue {
+  width: 190px;
+  left: -66px;
+  top: -97px;
+}
+
+.uroven-e1-2-clue {
+  width: 190px;
+  left: -66px;
+  top: -97px;
+}
+
+.davl-posle-nasosov-2-1-2-clue {
+  width: 195px;
+  left: -60px;
+  top: -96px;
+}
+
+.davl-posle-nasosov-3-1-2-clue {
+  width: 195px;
+  left: -60px;
+  top: -96px;
 }
 
 /* position parametrs HVO2 */
@@ -1197,7 +1371,7 @@ body {
   }
 
   .mnemo__param {
-    padding: 0 3px;
+    padding: 0 2px;
   }
 
   .mnemo__gif-img {
@@ -1324,6 +1498,72 @@ body {
   .column-e1-2 {
     width: 48px;
     height: 71px;
+  }
+
+  .davl-posle-nasosov-2-1-2 {
+    right: 7.2%;
+  }
+
+  .davl-posle-nasosov-3-1-2 {
+    right: 7.2%;
+  }
+
+  .mnemo__param-clue-span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .mnemo__param-clue-div {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .rashod-vody-na-ustanovky-clue {
+    width: 175px;
+    left: -66px;
+    top: -191px;
+  }
+
+  .rashod-vody-na-promyvky-clue {
+    width: 175px;
+    left: -66px;
+    top: -191px;
+  }
+
+  .davl-vhod-ustanivki-clue {
+    width: 170px;
+    left: -55px;
+    top: -90px;
+  }
+
+  .davl-posle-nasosov-2-1-2-clue {
+    width: 170px;
+    left: -55px;
+    top: -90px;
+  }
+
+  .davl-posle-nasosov-3-1-2-clue {
+    width: 170px;
+    left: -55px;
+    top: -90px;
+  }
+
+  .davl-posle-nasosov-1-1-2-3-clue {
+    width: 170px;
+    left: -55px;
+    top: -90px;
+  }
+
+  .uroven-e1-2-clue {
+    width: 170px;
+    left: -59px;
+    top: -91px;
+  }
+
+  .uroven-e1-1-clue {
+    width: 170px;
+    left: -59px;
+    top: -91px;
   }
 
   /* hvo2 media */

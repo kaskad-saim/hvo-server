@@ -18,65 +18,231 @@
 
   <div class="mnemo">
 
+    <!-- Всплывающие подсказки (вкл/выкл) -->
+
+    <div class="mnemo__param-box--btns">
+      <button class="mnemo__param-box--btn btn-reset hover-none-btn">
+        Включить всплывающие подсказки
+      </button>
+    </div>
+
     <!-- parameters -->
-    <div class="mnemo__param davl-vhod-ustanivki">
+    <div class="mnemo__param mnemo__tooltip davl-vhod-ustanivki">
       <span class="mnemo__param-text">
         <#PasspValue PasspType=1 PasspID=1 Precision=1>
       </span>
       <span class="mnemo__param-naimenov">кгс/м2</span>
+      <div class="mnemo__param-clue davl-vhod-ustanivki-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              МИДА-ДИ-15
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1 МПа
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param rashod-vody-na-ustanovky">
+    <div class="mnemo__param mnemo__tooltip rashod-vody-na-ustanovky">
       <span class="mnemo__param-text">
         <!-- <#PasspValue PasspType=7 PasspID=1 Precision=1> -->
         25
       </span>
       <span class="mnemo__param-naimenov">м3/ч</span>
+      <div class="mnemo__param-clue rashod-vody-na-ustanovky-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              ПРИМ-80-1-0
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диаметр: <span class="mnemo__param-clue-span">
+              Ду80
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Расход:
+            <span class="mnemo__param-clue-span">
+              <br>Qнаим=0,75 м3/ч<br>
+              Qперех=1,5 м3/ч<br>
+              Qнаиб=150 м3/ч
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Питание:
+            <span class="mnemo__param-clue-span">
+              <br> Питание 24В<br>
+              Потребляемый ток 40 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param davl-posle-nasosov-1-1-2-3">
+    <div class="mnemo__param mnemo__tooltip davl-posle-nasosov-1-1-2-3">
       <span class="mnemo__param-text">
         <#PasspValue PasspType=1 PasspID=2 Precision=1>
       </span>
       <span class="mnemo__param-naimenov">кгс/м2</span>
+      <div class="mnemo__param-clue davl-posle-nasosov-1-1-2-3-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              МИДА-ДИ-15
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1 МПа
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param uroven-e1-1">
-
+    <div class="mnemo__param mnemo__tooltip uroven-e1-1">
       <span class="mnemo__param-text e1-1-value">
         <#PasspValue PasspType=1 PasspID=5 Precision=0>
       </span>
       <span class="mnemo__param-naimenov">мм</span>
+      <div class="mnemo__param-clue uroven-e1-1-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              УГЦ-1.1
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1,6 м
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param uroven-e1-2 ">
-
+    <div class="mnemo__param mnemo__tooltip uroven-e1-2 ">
       <span class="mnemo__param-text e1-2-value">
         <#PasspValue PasspType=1 PasspID=6 Precision=0>
       </span>
       <span class="mnemo__param-naimenov">мм</span>
+      <div class="mnemo__param-clue uroven-e1-2-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              УГЦ-1.1
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1,6 м
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param rashod-vody-na-promyvky">
+    <div class="mnemo__param mnemo__tooltip rashod-vody-na-promyvky">
       <span class="mnemo__param-text">
         <!-- <#PasspValue PasspType=8 PasspID=1 Precision=1> -->
         25
       </span>
       <span class="mnemo__param-naimenov">м3/ч</span>
+      <div class="mnemo__param-clue rashod-vody-na-promyvky-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              ПРИМ-100-1-0
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диаметр: <span class="mnemo__param-clue-span">
+              Ду100
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Расход:
+            <span class="mnemo__param-clue-span">
+              <br>Qнаим=0,75 м3/ч<br>
+              Qперех=1,5 м3/ч<br>
+              Qнаиб=150 м3/ч
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Питание:
+            <span class="mnemo__param-clue-span">
+              <br> Питание 24В<br>
+              Потребляемый ток 40 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param davl-posle-nasosov-2-1-2">
+    <div class="mnemo__param mnemo__tooltip davl-posle-nasosov-2-1-2">
       <span class="mnemo__param-text">
         <#PasspValue PasspType=1 PasspID=3 Precision=1>
       </span>
       <span class="mnemo__param-naimenov">кгс/м2</span>
+      <div class="mnemo__param-clue davl-posle-nasosov-2-1-2-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              МИДА-ДИ-15
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1 МПа
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="mnemo__param davl-posle-nasosov-3-1-2">
+    <div class="mnemo__param mnemo__tooltip davl-posle-nasosov-3-1-2">
       <span class="mnemo__param-text">
         <#PasspValue PasspType=1 PasspID=4 Precision=1>
       </span>
       <span class="mnemo__param-naimenov">кгс/м2</span>
+      <div class="mnemo__param-clue davl-posle-nasosov-3-1-2-clue">
+        <div class="mnemo__param-clue-content">
+          <div class="mnemo__param-clue-div">Прибор:
+            <span class="mnemo__param-clue-span">
+              МИДА-ДИ-15
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Диапазон: <span class="mnemo__param-clue-span">
+              0...1 МПа
+            </span>
+          </div>
+          <div class="mnemo__param-clue-div">Токовый выход:
+            <span class="mnemo__param-clue-span">
+              4-20 мА
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="mnemo__param kontrol-im-1">
@@ -301,14 +467,14 @@
         <div class="mnemo__symbols-name mnemo__symbols-name-5"></div>
         <p class="mnemo__symbols-descr descr-reset">Вода осветленная</p>
       </div>
-      <div class="mnemo__symbols-item">
+      <!-- <div class="mnemo__symbols-item">
         <div class="mnemo__symbols-name mnemo__symbols-name-6"></div>
         <p class="mnemo__symbols-descr descr-reset">Вода такая 1</p>
       </div>
       <div class="mnemo__symbols-item">
         <div class="mnemo__symbols-name mnemo__symbols-name-7"></div>
         <p class="mnemo__symbols-descr descr-reset">Вода такая 2</p>
-      </div>
+      </div> -->
     </div>
   </div>
   <script src="http://Techsite6/kaskad/js/mnemo-hvo.js"></script>
