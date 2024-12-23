@@ -325,24 +325,6 @@ for (let i = 0; i < accordionTitle.length; i++) {
   el.addEventListener('click', (e) => {
     e.preventDefault();
     let contentNext = el.nextElementSibling;
-    // let contentBack = el.previousElementSibling;
-
-    // const formValue = (form, nameInput) => {
-    //   form.addEventListener('submit', (e) => {
-    //     e.preventDefault();
-    //     const password = form.querySelector(`[name="password-${nameInput}"]`);
-    //     const value = {
-    //       password: password.value,
-    //     };
-    //     if (value.password === '123456') {
-    //       dropDownDescrNull(accordionContent);
-    //       contentNext.style.maxHeight = contentNext.scrollHeight + 'px';
-    //       contentBack.classList.remove('active');
-    //     } else {
-    //       console.log('incorrect');
-    //     }
-    //   });
-    // };
 
     if (contentNext.style.maxHeight) {
       dropDownDescrNull(accordionContent);
